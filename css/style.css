@@ -7,19 +7,30 @@ Dark green: #28b485
 
 */
 
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+
+    box-sizing: inherit;
+    /*box-sizing: border-box;*/
+}
+
+html {
+    font-size: 62.5%;
+    /*Waarom 10px gemakkelijk om alles om te zetten naar rem 1/10*/
+    /*62.5 = 10px  / 16px (default)*/
 }
 
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    /*font-size: 16px;*/
     line-height: 1.7;
     color: #777;
-    padding: 30px;
+    padding: 3rem;
+    box-sizing: border-box;
 }
 
 .header {
@@ -32,33 +43,33 @@ body {
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
  }
 
-.logo-box {
+.header__logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
-.logo {
-    height: 35px;
+.header__logo {
+    height: 3.5rem;
 }
 
-.text-box {
+.header__text-box {
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-40%, -50%);
+    transform: translate(-50%, -50%);
     text-align: center;
 }
 
 .heading-primary {
     color: white;
     text-transform: uppercase;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 }
 
-.heading-primary-main {
-    letter-spacing: 35px;
-    font-size: 60px;
+.heading-primary--main {
+    letter-spacing: 3.5rem;
+    font-size: 6rem;
     display: block;
     font-weight: 400;
     animation-name: moveInLeft;
@@ -66,9 +77,9 @@ body {
     animation-timing-function: ease-out;
 }
 
-.heading-primary-sub {
-    letter-spacing: 16px;
-    font-size: 20px;
+.heading-primary--sub {
+    letter-spacing: 1.6rem;
+    font-size: 2rem;
     display: block;
     font-weight: 700;
     animation: moveInRight 1s ease-out;
@@ -80,13 +91,13 @@ body {
     text-decoration: none;
     color: #777;
     display: inline-block;
-    border-radius: 100px;
+    border-radius: 10rem;
     transition: all 0.3s;
     position: relative;
-
+    font-size: 1.6rem;
 }
 
-.btn-animated {
+.btn--animated {
     animation: moveInBottom 1s ease-out 0.75s;
     /*The element will get the style values that is set by the first keyframe (depends on animation-direction), and retain this during the animation-delay period*/
     animation-fill-mode: backwards;
@@ -95,20 +106,20 @@ body {
 .btn:hover {
     transform: translateY(-3px);
     /*box-shadow: none|h-shadow v-shadow blur spread color*/
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .btn:active {
     transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
 
 }
 
-.btn-white {
+.btn--white {
 
     background-color: white;
     color: #777;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
 }
 
 .btn::after {
@@ -116,7 +127,7 @@ body {
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: absolute;
     top:0;
     left: 0;
@@ -124,7 +135,7 @@ body {
     transition: all 0.4s;
 }
 
-.btn-white::after {
+.btn--white::after {
     background-color: white;
 }
 
@@ -139,11 +150,11 @@ body {
 
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
 
     }
      80% {
-         transform: translateX(10px);
+         transform: translateX(1rem);
 
      }
 
@@ -157,11 +168,11 @@ body {
 
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
 
     }
     80% {
-        transform: translateX(-10px);
+        transform: translateX(-1rem);
 
     }
 
@@ -176,7 +187,7 @@ body {
 
     0% {
         opacity: 0;
-        transform: translateY(100px);
+        transform: translateY(10rem);
 
     }
 
