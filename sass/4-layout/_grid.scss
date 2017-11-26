@@ -4,7 +4,6 @@
 
 .row {
   max-width: $grid-width;
-  background-color: #eee;
   margin: 0 auto;
   &:not(:last-child){
     margin-bottom: $gutter-vertical;
@@ -14,9 +13,7 @@
 
   // ^ begins - * contain - $ ends
   [class^=col-] {
-    background-color: orangered;
     float: left;
-
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
     }
@@ -31,7 +28,7 @@
   }
 
   .col-2-of-3 {
-    width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal};
+    width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
   }
 
   .col-1-of-4 {
