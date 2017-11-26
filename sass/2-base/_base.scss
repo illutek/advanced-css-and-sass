@@ -1,0 +1,24 @@
+// ///////////////////////
+// @@ ++ BASE
+// ///////////////////////
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: inherit;
+  /*box-sizing: border-box;*/
+}
+
+html {
+  // This defines what 1 rem is
+  font-size: 62.5%;
+  //Waarom 10px gemakkelijk om alles om te zetten naar rem 1/10
+  //62.5 = 10px  / 16px (default)
+}
+
+body {
+  box-sizing: border-box;
+}
