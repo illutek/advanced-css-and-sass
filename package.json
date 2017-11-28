@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "advance css sass cource",
   "main": "index.js",
-  "scripts": {
-
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/illutek/advanced-css-and-sass.git"
