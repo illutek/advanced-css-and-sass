@@ -24,7 +24,7 @@
   &:hover {
     transform: translateY(-3px);
     /*box-shadow: none|h-shadow v-shadow blur spread color*/
-    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    box-shadow: 0 1rem 2rem $bs-tr-20;
 
     &::after {
       transform: scaleX(1.4) scaleY(1.6);
@@ -34,7 +34,7 @@
 
   &:active {
     transform: translateY(-1px);
-    box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
+    box-shadow: 0 .5rem 1rem $bs-tr-20;
   }
 
   &--white {
@@ -77,12 +77,12 @@
   &:hover {
     background-color: $color-primary;
     color: $color-white;
-    box-shadow: 0 1rem 2rem rgba($color-black, .15);
+    box-shadow: 0 1rem 2rem $bs-tr-15;
     transform: translateY(-2px);
   }
 
   &:active {
-    box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+    box-shadow: 0 .5rem 1rem $bs-tr-15;
     transform: translateY(-1px);
   }
 }

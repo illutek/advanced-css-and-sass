@@ -5,18 +5,53 @@
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem;
 
   &__side {
-    background-color: orangered;
     height: 50rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
 
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem r$bs-tr-15;
     font-size: 2rem;
     color: white;
-    transition: all .8s;
+    transition: all .8s ease;
+
+    &--front {
+
+      background-color: $color-white;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+      }
+
+      &-2 {
+        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+      }
+
+      &-3 {
+        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+      }
+    }
   }
 
-
-  &:hover &__side {
+  &:hover &__side--front {
     transform: rotateY(180deg);
   }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
 }
+
+

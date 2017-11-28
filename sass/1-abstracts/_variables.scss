@@ -6,11 +6,20 @@
 $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+$color-grey-light-1: #f7f7f7;
+
 $color-grey-dark: #777;
 $color-white: #fff;
 $color-black: #000;
 
-$color-grey-light-1: #f7f7f7;
+
 
 // Grid
 $grid-width: 114rem;
@@ -20,3 +29,10 @@ $gutter-horizontal: 6rem;
 
 // Font
 $default-font-size: 1.6rem;
+
+
+// Box-shadow
+$bs-tr-15: rgba($color-black, .15);
+$bs-tr-20: rgba($color-black, 0.2);
+$bs-tr-40: rgba($color-black, .4);
+$bs-tr-50: rgba($color-black, .5);
