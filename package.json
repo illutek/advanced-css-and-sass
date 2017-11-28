@@ -4,7 +4,7 @@
   "description": "advance css sass cource",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,12 @@
   },
   "homepage": "https://github.com/illutek/advanced-css-and-sass#readme",
   "devDependencies": {
-    "node-sass": "^4.7.2"
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-prettyerror": "^1.2.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-watch": "^4.3.11"
   }
 }
