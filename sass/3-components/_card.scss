@@ -17,7 +17,7 @@
     backface-visibility: hidden;
     overflow: hidden;
 
-    border-radius: 3px;
+    border-radius: 3$border-radius-default;
     box-shadow: 0 1.5rem 4rem r$bs-tr-15;
     transition: all .8s ease;
 

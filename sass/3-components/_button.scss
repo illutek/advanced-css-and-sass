@@ -3,6 +3,7 @@
 // ///////////////////////
 
 .btn {
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -13,6 +14,10 @@
     transition: all 0.3s;
     position: relative;
     font-size: $default-font-size;
+
+    // Change for the <button> element
+    border: none;
+    cursor: pointer;
   }
 
   &--animated {
@@ -32,7 +37,9 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none; // om blauwe border te verwijderen bij klikken op de button (:focus)
     transform: translateY(-1px);
     box-shadow: 0 .5rem 1rem $bs-tr-20;
   }

@@ -17,6 +17,8 @@ $color-grey-light-1: #f7f7f7;
 $color-grey-light-2: #eeeeee;
 
 $color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
 $color-white: #fff;
 $color-black: #000;
 
@@ -38,3 +40,7 @@ $bs-tr-15: rgba($color-black, .15);
 $bs-tr-20: rgba($color-black, 0.2);
 $bs-tr-40: rgba($color-black, .4);
 $bs-tr-50: rgba($color-black, .5);
+
+// Border-radius
+
+$border-radius-default: 3px;
