@@ -19,7 +19,8 @@
     border-radius: 50%;
     z-index: 2000;
     box-shadow: 0 1rem 3rem $bs-tr-10;
-
+    text-align: center;
+    cursor: pointer;
   }
 
   &__background {
@@ -95,6 +96,66 @@
   &__checkbox:checked ~ &__nav {
     opacity: 1;
     width: 100%;
+  }
+
+
+  // ICON
+  &__icon {
+    position: relative;
+    transform: translateY(3.5rem);
+
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $color-grey-dark-3;
+      display: inline-block;
+      transition: all .3s;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: -.8rem;
+    }
+
+    &::after {
+      top: .8rem;
+    }
+
+  }
+
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    // display: none; geen optie before and after zijn afhankelijk
+    //display: none;
+
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    transform: rotate(135deg);
+    top:  0;
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    transform: rotate(-135deg);
+    top: 0;
+
   }
 
 }
