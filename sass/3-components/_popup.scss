@@ -10,18 +10,32 @@
   top: 0;
   left: 0;
   z-index: 3000;
+  transition: all .3s;
+
+  opacity: 0; // niet display:none; omdat we dit niet kunnen animeren
+  visibility: hidden;
 
   @include element(content) {
+    // onderstaande translate mixin deel moeten herhalen in latere transform,
+    // als er 2 transform onder 1 element
+    // voorkomen moeten deze allebei in 1 lijn worden opgeroepen
+    // transform: translate(-50%, -50%) scale(.5);
     @include center-horizontal-vertical;
     width: 75%;
     background-color: $color__white;
     border-radius: $border__radius--default;
     display: table;
+    overflow: hidden;
+
+    // dit om vanuit het midden scherm te tonen
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.2);
+    transition: all .3s .2s;  // transition: all .duration delay;
+
   }
 
   @include element(left) {
     width: 33.333333%;
-    overflow: hidden;
     display: table-cell;
   }
 
@@ -40,6 +54,45 @@
   @include element(text) {
     font-size: 1.4rem;
     margin-bottom: 4rem;
+
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid $color-grey-light-2;
+
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto; // taalcode opgeven in de html-head
   }
+
+  &:target { // Pseudo class target is beschikbaar als deze toegevoegd is in de url #iets
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  @include element(close) {
+    &:link,
+    &:visited {
+      color: $color-grey-dark;
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      font-size: 3rem;
+      line-height: 1;
+      text-decoration: none;
+      display: inline-block;
+      transition: all .3s;
+    }
+
+    &:hover {
+      color: $color-primary-dark;
+    }
+  }
+
 
 }
