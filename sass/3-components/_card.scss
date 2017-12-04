@@ -17,12 +17,12 @@
     backface-visibility: hidden;
     overflow: hidden;
 
-    border-radius: 3$border-radius-default;
+    border-radius: 3 $border__radius--default;
     box-shadow: 0 1.5rem 4rem r$bs-tr-15;
     transition: all .8s ease;
 
     &--front {
-      background-color: $color-white;
+      background-color: $color__white;
     }
 
     &--back {
@@ -82,7 +82,7 @@
     font-weight: 300;
     text-transform: uppercase;
     text-align: right;
-    color: $color-white;
+    color: $color__white;
     position: absolute;
     top: 12rem;
     right: 2rem;
@@ -146,7 +146,7 @@
   &__price-box {
     text-align: center;
     margin-bottom: 8rem;
-    color: $color-white;
+    color: $color__white;
   }
 
   &__price-only {

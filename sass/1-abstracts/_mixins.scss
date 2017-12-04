@@ -1,5 +1,5 @@
 // ///////////////////////
-  // @@ ++ MIXIN
+// @@ ++ MIXIN
 // ///////////////////////
 
 @mixin clearfix {
@@ -15,4 +15,18 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+// BEM element and modifier
+@mixin element($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin modifier($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
 }

@@ -13,7 +13,7 @@
     font-family: inherit;
     padding: 1.5rem 2rem;
     border-radius: 2px;
-    background-color: rgba($color-white, .5);
+    background-color: rgba($color__white, .5);
     border: none;
     border-bottom: 3px solid transparent;
     display: block;
@@ -22,7 +22,7 @@
     &:focus {
       outline: none;
       box-shadow: 0 1rem 2rem $bs-tr-15;
-      border-bottom: 3px solid $color-primary;
+      border-bottom: 3px solid $color__primary;
     }
 
     &:focus:invalid {
@@ -68,7 +68,7 @@
   &__radio-button {
     height: 3rem;
     width: 3rem;
-    border: 5px solid $color-primary;
+    border: 5px solid $color__primary;
     border-radius: 50%;
     display: inline-block;
     position: absolute;
@@ -80,7 +80,7 @@
       height: 1.3rem;
       width: 1.3rem;
       display: block;
-      background-color: $color-primary;
+      background-color: $color__primary;
       border-radius: 50%;
       position: absolute;
       top: 50%;

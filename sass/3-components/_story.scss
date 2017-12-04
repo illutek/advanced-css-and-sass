@@ -7,7 +7,7 @@
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem $bs-tr-10;
-  background-color: rgba($color-white, .6);
+  background-color: rgba($color__white, .6);
   padding: 6rem;
   border-radius: 3px;
   font-size: $default-font-size;
@@ -54,7 +54,7 @@
   &__caption {
 
     position: absolute;
-    color: $color-white;
+    color: $color__white;
     text-transform: uppercase;
     font-size: 1.7rem;
     text-align: center;
