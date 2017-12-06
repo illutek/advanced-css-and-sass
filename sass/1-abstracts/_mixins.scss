@@ -31,6 +31,7 @@
   }
 }
 
+
 // MEDIA QUERY MANAGER
 /*
 * 0 - 600px:      Phone
@@ -38,9 +39,7 @@
 * 900px - 1200px: Tablet landscape
 * [1200px - 1800px] is de normale styles de desktop
 * 1800px +        Big desktop
-*/
-
-/*
+*
 * $breakpoint argument choices
 *
 * - phone
@@ -49,6 +48,8 @@
 * - big-desktop
 *
 * 1em = 16px
+*
+* ORDER: Base + typography > general layout + grid > page layout > components
  */
 
 @mixin respond($breakpoint) {
