@@ -46,6 +46,9 @@
   }
 }
 
+
+
+
 .section-stories {
   padding: 15rem 0;
   position: relative;
@@ -79,8 +82,17 @@
   @include respond(tab-land) {
     background-image: linear-gradient(105deg,
         rgba($color__white, .9) 0%,
-        rgba($color__white, .9) 70%,
-        transparent 70%),
+        rgba($color__white, .9) 65%,
+        transparent 65%),
+    url("../img/nat-10.jpg");
+    background-size: cover;
+  }
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(to right,
+            rgba($color__white, .9) 0%,
+            rgba($color__white, .9) 100%,
+            transparent 0),
     url("../img/nat-10.jpg");
   }
 
@@ -89,7 +101,12 @@
     padding: 6rem;
 
     @include respond(tab-land) {
-      width: 70%;
+      width: 65%;
     }
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
   }
 }

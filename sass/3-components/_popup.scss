@@ -15,7 +15,7 @@
   opacity: 0; // niet display:none; omdat we dit niet kunnen animeren
   visibility: hidden;
 
-  @include element(content) {
+  &__content {
     // onderstaande translate mixin deel moeten herhalen in latere transform,
     // als er 2 transform onder 1 element
     // voorkomen moeten deze allebei in 1 lijn worden opgeroepen
@@ -32,26 +32,39 @@
     transform: translate(-50%, -50%) scale(.2);
     transition: all .3s .2s;  // transition: all .duration delay;
 
+    @include respond(phone) {
+      display: block;
+    }
+
   }
 
-  @include element(left) {
+  &__left {
     width: 33.333333%;
     display: table-cell;
+
+    @include respond(phone) {
+      display: none;
+    }
   }
 
-  @include element(right) {
+  &__right {
     width: 66.6666667%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+    @include respond(phone) {
+      display: block;
+      width: 100%;
+    }
   }
 
-  @include element(img) {
+  &__img {
     display: block;
     width: 100%;
   }
 
-  @include element(text) {
+  &__text {
     font-size: 1.4rem;
     margin-bottom: 4rem;
 
@@ -63,6 +76,10 @@
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto; // taalcode opgeven in de html-head
+
+    @include respond(phone) {
+      column-count: 1;
+    }
   }
 
   &:target { // Pseudo class target is beschikbaar als deze toegevoegd is in de url #iets
@@ -75,7 +92,7 @@
     transform: translate(-50%, -50%) scale(1);
   }
 
-  @include element(close) {
+  &__close {
     &:link,
     &:visited {
       color: $color-grey-dark;
