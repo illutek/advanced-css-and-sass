@@ -2,7 +2,6 @@
 // @@ ++ HEADER
 // ///////////////////////
 
-
 .header {
   position: relative;
   height: 95vh;
@@ -10,7 +9,7 @@
           to right bottom,
           rgba($color-primary-light, 0.80),
           rgba($color-primary-dark, 0.80)),
-  url("../img/hero.jpg");
+  url("../img/hero-small.jpg");
   background-size: cover;
   background-position: top;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -20,6 +19,23 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
   }
+
+  @media (min-resolution: 192dpi) and (min-width: 37.5em),
+         (min-width: 125em) {
+    background-image: linear-gradient(
+            to right bottom,
+            rgba($color-secondary-light, 0.80),
+            rgba($color-secondary-dark, 0.80)),
+    url("../img/hero.jpg");
+  }
+
+  //@media (min-width: 2000px) {
+  //  background-image: linear-gradient(
+  //          to right bottom,
+  //          rgba($color-secondary-light, 0.80),
+  //          rgba($color-secondary-dark, 0.80)),
+  //  url("../img/hero.jpg");
+  //}
 
   &__logo-box {
     position: absolute;
