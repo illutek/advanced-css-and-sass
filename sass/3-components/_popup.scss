@@ -15,6 +15,13 @@
   opacity: 0; // niet display:none; omdat we dit niet kunnen animeren
   visibility: hidden;
 
+  // backdrop-filter only for safari
+  @supports (-webkit-backdrop-filter: blur(10px)) {
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba($color-black, .3);
+  }
+  
+
   &__content {
     // onderstaande translate mixin deel moeten herhalen in latere transform,
     // als er 2 transform onder 1 element
